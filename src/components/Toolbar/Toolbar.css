@@ -49,6 +49,27 @@
     color: goldenrod;
 }
 
+.toolbar_nav_icons ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.toolbar_nav_icons li{
+    padding: 0 0.5rem; 
+}
+
+.toolbar_nav_icons a{
+    color: white;
+    text-decoration: none;
+}
+
+.toolbar_nav_icons a:hover,
+.toolbar_nav_icons a:active{
+    color: goldenrod;
+}
+
 @media (max-width: 768px){
     .toolbar_nav_items{
         display: none
