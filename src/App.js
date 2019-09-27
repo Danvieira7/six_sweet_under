@@ -38,10 +38,15 @@ class App extends Component {
         />
         <SideDrawer show={this.state.SideDrawerOpen}/>
         {backdrop}
-        
+
         <Hero/>
-        <footer>
-          Footer
+        <footer className="footer">
+          <div>
+            
+              © 2019 Copyright: Six Sweet under<br/>
+            
+              Created by <a href="/">Danillo Vieira</a>
+          </div>
         </footer>
       </div>
     );

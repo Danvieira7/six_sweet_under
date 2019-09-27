@@ -33,9 +33,11 @@
     margin: 0;
     padding: 0;
     display: flex;
+    font-family: 'Ruthie', cursive;
 }
 
 .toolbar_nav_items li{
+    font-size: 30px;
     padding: 0 0.5rem; 
 }
 
@@ -47,6 +49,7 @@
 .toolbar_nav_items a:hover,
 .toolbar_nav_items a:active{
     color: goldenrod;
+
 }
 
 .toolbar_nav_icons ul{
