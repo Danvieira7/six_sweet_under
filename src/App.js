@@ -38,6 +38,7 @@ class App extends Component {
         />
         <SideDrawer show={this.state.SideDrawerOpen}/>
         {backdrop}
+        
         <Hero/>
         <footer>
           Footer
