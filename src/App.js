@@ -30,7 +30,6 @@ class App extends Component {
     if(this.state.SideDrawerOpen) {
       backdrop = <Backdrop click={this.backdropClickHandler}/>
     }
-
     return(
       <div style={{height:"100%"}}> 
         <Toolbar
@@ -38,14 +37,11 @@ class App extends Component {
         />
         <SideDrawer show={this.state.SideDrawerOpen}/>
         {backdrop}
-
         <Hero/>
         <footer className="footer">
           <div>
-            
-              © 2019 Copyright: Six Sweet under<br/>
-            
-              Created by <a href="/">Danillo Vieira</a>
+            © 2019 Copyright: Six Sweet under<br/>
+            Created by <a href="/">Danillo Vieira</a>
           </div>
         </footer>
       </div>
