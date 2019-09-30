@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import SideDrawer from "./components/SideDrawer/SideDrawer";
-import Hero from "./components/Hero/Hero";
-import Toolbar from "./components/Toolbar/Toolbar";
-import Backdrop from "./components/Backdrop/Backdrop";
+import { Route } from 'react-router-dom';
+import SideDrawer from "../../components/SideDrawer/SideDrawer";
+import Hero from "../../components/Hero/Hero";
+import Toolbar from "../../components/Toolbar/Toolbar";
+import Backdrop from "../../components/Backdrop/Backdrop";
 
 import './App.css';
 
@@ -30,6 +31,7 @@ class App extends Component {
     if(this.state.SideDrawerOpen) {
       backdrop = <Backdrop click={this.backdropClickHandler}/>
     }
+    
     return(
       <div style={{height:"100%"}}> 
         <Toolbar
