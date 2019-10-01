@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import SideDrawer from "../../components/SideDrawer/SideDrawer";
-import Hero from "../../components/Hero/Hero";
+import ImageForm from "../ImagesFormPage/ImagesFormPage"
+import HomePage from "../HomePage/HomePage";
 import Toolbar from "../../components/Toolbar/Toolbar";
 import Backdrop from "../../components/Backdrop/Backdrop";
+import imageService from '../../utils/imageService';
 
 import './App.css';
 
@@ -11,8 +13,13 @@ class App extends Component {
   constructor(){
     super();
     this.state ={
-      SideDrawerOpen: false
+      SideDrawerOpen: false,
+      images: []
     }
+  }
+
+  async componentDidMount() {
+   await console.log(imageService.getImages())
   }
   
   toggleClickHandler = () => {
@@ -34,18 +41,17 @@ class App extends Component {
     
     return(
       <div style={{height:"100%"}}> 
-        <Toolbar
-          drawerClickHandler={this.toggleClickHandler}
-        />
+        <Toolbar drawerClickHandler={this.toggleClickHandler}/>
         <SideDrawer show={this.state.SideDrawerOpen}/>
-        {backdrop}
-        <Hero/>
-        <footer className="footer">
-          <div>
-            © 2019 Copyright: Six Sweet under<br/>
-            Created by <a href="/">Danillo Vieira</a>
-          </div>
-        </footer>
+        {backdrop} 
+        <Switch>
+          <Route exact path="/" render={(props) => ( 
+            <HomePage {...props}/> 
+          )}/>
+          <Route exact path="/upload" render={(props) => (
+            <ImageForm {...props}/> 
+          )}/>
+        </Switch>
       </div>
     );
   }
