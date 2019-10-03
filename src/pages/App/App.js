@@ -5,7 +5,6 @@ import ImageForm from "../ImagesFormPage/ImagesFormPage"
 import HomePage from "../HomePage/HomePage";
 import Toolbar from "../../components/Toolbar/Toolbar";
 import Backdrop from "../../components/Backdrop/Backdrop";
-import imageService from '../../utils/imageService';
 
 import './App.css';
 
@@ -13,13 +12,8 @@ class App extends Component {
   constructor(){
     super();
     this.state ={
-      SideDrawerOpen: false,
-      images: []
+      SideDrawerOpen: false
     }
-  }
-
-  async componentDidMount() {
-   await console.log(imageService.getImages())
   }
   
   toggleClickHandler = () => {

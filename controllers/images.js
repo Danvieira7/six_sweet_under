@@ -1,19 +1,27 @@
 const Image = require("../models/image");
 
 module.exports = {
-    createImage,
-    getAllImages
+    getAllImages,
+    createImage
 }
 
-function getAllImages(req, res) {
-    Image.find({}).then( images => {
-        res.status(200).json(images);
-        console.log("IMAGES DATA", images)
+async function getAllImages(req, res) {
+    await Image.find({}).then( data => {
+        res.status(200).json(data);
+        // console.log("IMAGES DATA", data)
     })
 }
 
-async function createImage(req, res) {
-    await Image.create(req.body).then( image => {
-        res.status(201).json(image);
+function createImage(req, res) {
+    var data = new Image(req.body);
+    console.log("REQ", req.file)
+    console.log("DATA", data)
+    // data.image = req.file.url;
+    data.save(() => {
+        res.status(201).json(data)
     });
+    
+    // await Image.create(req.body).then( image => {
+    //     res.status(201).json(image);
+ // });
 }

@@ -1,0 +1,27 @@
+.image-wrapper {
+    display: flex;
+    
+    justify-content: center;
+    margin:20px;
+    width: 50%;
+}
+.card img {
+    max-width: 400px;
+    padding: 10px;
+}
+
+.details-wrapper {
+    color: white;
+    width: 50%;
+    height: 55%x;
+    background-color: transparent;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+}
+
+.description, .name{
+    padding: 10px;
+}

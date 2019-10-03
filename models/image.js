@@ -6,6 +6,9 @@ var imageSchema = new Schema({
         type: String,
         required: true
     },
+    index: {
+        type: Number
+    },
     description: {
         type: String,
         required: true
@@ -20,7 +23,7 @@ var imageSchema = new Schema({
     },
     image: {
         type: String,
-        required: true
+        // required: true
     },
 });
 

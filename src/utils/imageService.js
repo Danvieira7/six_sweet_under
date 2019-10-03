@@ -1,25 +1,24 @@
-const BASE_URL = "/api/images/";
+const BASE_URL = "http://localhost:5000/api/images/";
 
-function uploadImage (info){
+function getImages() {
+  return fetch( BASE_URL + "getAllImages", {
+    method: "GET",
+  }).then( res => {
+    return res.json()
+  }).catch(err => console.log("ERROR", err))
+}
+
+function uploadImage (data){
   return fetch(BASE_URL + 'createImage', {
     method: 'POST',
-    headers: new Headers({
-      "Content-Type": "application/json" 
-    }),
-    body: JSON.stringify(info)
+    body: JSON.stringify(data)
   })
   .then(res => {
     return res.json();
   });
 }
 
-function getImages(req, res) {
-  return fetch( BASE_URL + "getAllImages", {
-    method: "GET",
-  }).then( res => {return res.json()});
-}
-
 export default {
-  uploadImage,
-  getImages
+  getImages,
+  uploadImage
 }

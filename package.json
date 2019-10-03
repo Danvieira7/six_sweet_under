@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "cloudinary": "^1.15.0",
+    "cors": "^2.8.5",
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "mongoose": "^5.7.1",
     "morgan": "^1.9.1",
+    "multer": "^1.4.2",
+    "multer-storage-cloudinary": "^2.2.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.1.1",
@@ -14,6 +18,14 @@
     "react-spring": "^8.0.27",
     "serve-favicon": "^2.5.0"
   },
+  "files": [
+    "bin",
+    "binding.gyp",
+    "lib",
+    "scripts",
+    "src",
+    "vendor"
+  ],
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -34,6 +46,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ],
-    "proxy": "http://localhost:3001"
+    "proxy": "http://localhost:5000"
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0"
   }
 }
