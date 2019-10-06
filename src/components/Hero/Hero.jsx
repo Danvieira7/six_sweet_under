@@ -14,6 +14,7 @@ export default function Hero(){
                 <div style={props}>
                     <div className="hero-container">
                         <img className="photo" src="https://i.imgur.com/PdH1RcD.jpg" alt="F Dot Logo"/>
+                        <h1 className="ssu">Six Sweet Under</h1>
                     </div> 
                 </div>
             )}

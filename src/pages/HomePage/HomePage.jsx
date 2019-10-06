@@ -1,17 +1,34 @@
 import React from "react";
 import Hero from "../../components/Hero/Hero";
 import Products from "../../components/Products/Products";
+import About from "../../components/About/About";
 
-const HomePage = (props) => {
+import "./HomePage.css"
+
+const HomePage = () => {
     return(
-        <div style={{height:"100%"}}> 
-            <Hero/>
-            <Products />
-            <footer className="footer">
-            <div>
-                © 2019 Copyright: Six Sweet under<br/>
-                Created by <a href="/">Danillo Vieira</a>
-            </div>
+        <div className="home_page"> 
+            <Hero id="hero" />
+            <About id="about"/>
+            <Products id="products"/>
+            <footer className="footer" id="contact">    
+                <img src="https://i.imgur.com/jIu9duU.png" alt=""/>
+                <p>
+                    Contact Us <br/>
+                    Phone: (000) 000 - 0000 <br/>
+                    Email: sixsweetunder@gmail.com
+                </p>
+                <p className="Copyright">
+                    © 2019 Copyright: Six Sweet Under <br/>
+                    Created by 
+                    <a 
+                        href="https://www.danillovieira.com/"   
+                        rel="noopener noreferrer" 
+                        target="_blank"
+                    >
+                        Danillo Vieira
+                    </a>
+                </p>   
             </footer>
         </div>
     );

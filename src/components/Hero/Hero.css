@@ -1,9 +1,19 @@
 .hero-container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     height: 100vh;
 }
 
 .photo{
-    height: 100vh;
+    height: 95vh;
+}
+
+.ssu {
+    margin-top: -76px;
+    font-family: paper;
+    font-size: 10vw;
+    /* color: rgb(154, 32, 28); */
+    color: white;
 }

@@ -18,7 +18,6 @@ class App extends Component {
   
   toggleClickHandler = () => {
     this.setState((prevState) => {
-      // this sets the state to the oposite of the prevState
       return{SideDrawerOpen: !prevState.SideDrawerOpen}
     });
   };

@@ -1,10 +1,12 @@
 .toolbar{
     position: fixed;
+    display: block;
     top: 0;
     left: 0;
     width: 100%;
     background-color: transparent;
-    height: 56px;
+    height: 100px;
+    z-index: 9999;
 }
 
 .toolbar_navigation{
@@ -14,19 +16,21 @@
     padding: 0 1rem;
 }
 
+.spacer{
+    flex: 1;
+}
+
+/* ---------LOGO---------- */
 .toolbar_logo {
     margin-left: 1rem;
 }
 
-.toolbar_logo a {
-    color:white;
-    text-decoration: none;
-    font-size: 2rem;
+.toolbar_logo img {
+    height: 100px;
+    padding-top: 10px;
 }
 
-.spacer{
-    flex: 1;
-}
+/* --------LINKS--------- */
 
 .toolbar_nav_items ul{
     list-style: none;
@@ -34,23 +38,26 @@
     padding: 0;
     display: flex;
     font-family: 'Ruthie', cursive;
+    color: white;
 }
 
-.toolbar_nav_items li{
+.li {
     font-size: 30px;
     padding: 0 0.5rem; 
 }
 
-.toolbar_nav_items a{
+/* .toolbar_nav_items a{
     color: white;
     text-decoration: none;
-}
+} */
 
-.toolbar_nav_items a:hover,
-.toolbar_nav_items a:active{
+.toolbar_nav_items li:hover,
+.toolbar_nav_items li:active{
+    cursor: pointer;
     color: goldenrod;
-
 }
+
+/* ------ICONS------- */
 
 .toolbar_nav_icons ul{
     list-style: none;
@@ -60,7 +67,8 @@
 }
 
 .toolbar_nav_icons li{
-    padding: 0 0.5rem; 
+    padding: 0 0.5rem;
+    font-size: 30px; 
 }
 
 .toolbar_nav_icons a{
@@ -72,6 +80,8 @@
 .toolbar_nav_icons a:active{
     color: goldenrod;
 }
+
+/* ------RESPOSINVENESS------ */
 
 @media (max-width: 768px){
     .toolbar_nav_items{

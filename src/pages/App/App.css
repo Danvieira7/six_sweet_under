@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  height: 100%;
 }
 
 .App-logo {
@@ -15,27 +16,4 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #09d3ac;
-}
-
-.footer{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 50px;
-  background-color:black;
-  color: white;
-  text-align: center;
-}
-
-.footer a {
-  color:white;
-  text-decoration: none;
-}
-.footer a:hover, 
-.footer a:active {
-  color: goldenrod;
 }
