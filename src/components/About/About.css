@@ -1,18 +1,13 @@
 .about {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
     text-align: center;
     color:white;
-    height: 110vh;
     width: 75%;
 }
 
 .about_title {
     font-size: 7vw;
-    /* font-family: paper;  */
-    font-family: 'Amatic SC', cursive;
+    font-family: paper;
 }
 
 .about-body {

@@ -1,5 +1,7 @@
 import React from "react";
-import { Link } from "react-scroll";
+import * as Scroll from 'react-scroll';
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 import ToggleButton from "../SideDrawer/ToggleButton";
 
 import "./Toolbar.css";
@@ -30,7 +32,7 @@ const Toolbar = props => (
                     <li>
                         <Link 
                             className="li"
-                            activeClass="active"
+                            // activeClass="active"
                             to="about"
                             spy={ true }
                             smooth={ true }
@@ -43,7 +45,7 @@ const Toolbar = props => (
                     <li>
                         <Link 
                             className="li"
-                            activeClass="active"
+                            // activeClass="active"
                             to="products"
                             spy={ true }
                             smooth={ true }
@@ -56,7 +58,7 @@ const Toolbar = props => (
                     <li>
                         <Link 
                             className="li"
-                            activeClass="active"
+                            // activeClass="active"
                             to="contact"
                             spy={ true }
                             smooth={ true }

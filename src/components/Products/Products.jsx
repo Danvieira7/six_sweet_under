@@ -12,6 +12,8 @@ class Products extends Component {
             properties: [],
             property: "",
             bolo: [],
+            bars: [],
+            flavors: [],
             cupcake: []
         }
     }
@@ -19,12 +21,16 @@ class Products extends Component {
     async componentDidMount() {
         const data = await imageService.getImages()
         const bolo = data.filter( b => b.category === "bolo");
+        const bars = data.filter( b => b.category === "bars");
+        const flavors = data.filter( b => b.category === "flavors");
         const cupcake = data.filter( c => c.category === "cupcake");
         this.setState({
             properties: bolo,
-            property: bolo[0],
+            property: bolo[0],  
             bolo: bolo,
             cupcake: cupcake,
+            bars: bars,
+            flavors: flavors,
             active: "cake",
             showComp: false
         })
@@ -57,6 +63,20 @@ class Products extends Component {
             property: this.state.cupcake[0],
         })    
     }
+
+    barsChange = () => {
+        this.setState({
+            properties: this.state.bars,
+            property: this.state.bars[0],
+        })    
+    }
+
+    flavorsChange = () => {
+        this.setState({
+            properties: this.state.flavors,
+            property: this.state.flavors[0],
+        })    
+    }
     
     render(){
         const { property } = this.state;
@@ -78,8 +98,8 @@ class Products extends Component {
                         <Tabs active={this.state.active} onChange={active => this.setState({active})}>
                             <div key="cake" onClick={this.cakeChange}>Cakes</div>
                             <div key="graveyards" onClick={this.cupcakeChange}>Graveyards</div>
-                            <div key="bars" onClick={this.cupcakeChange}>Bars</div>
-                            <div key="Fflavors" onClick={this.cupcakeChange}>Flavors</div>
+                            <div key="bars" onClick={this.barsChange}>Bars</div>
+                            <div key="flavors" onClick={this.flavorsChange}>Flavors</div>
                             <div key="pricing" onClick={this.cupcakeChange}>Pricing</div>
                         </Tabs>
                         < Card property={property}/> 
