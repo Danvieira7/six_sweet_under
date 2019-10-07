@@ -20,7 +20,7 @@ const Toolbar = props => (
                     to="hero"
                     spy={ true }
                     smooth={ true }
-                    offset={0}
+                    offset={-20}
                     duration={500}
                 >
                     <img src="https://i.imgur.com/jIu9duU.png" alt=""/>
@@ -36,7 +36,7 @@ const Toolbar = props => (
                             to="about"
                             spy={ true }
                             smooth={ true }
-                            offset={-210}
+                            offset={-230}
                             duration={500}
                         >
                             About

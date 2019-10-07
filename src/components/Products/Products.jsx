@@ -81,18 +81,17 @@ class Products extends Component {
     render(){
         const { property } = this.state;
         return(
-            <div className="products" id="products">
+            <div className="products" >
                 <h1 className="products-title">Products</h1>
                 <div className="product-wrapper ">
                     <div className="btn">
                         <i 
-                            style={{color: "white"}}
-                            className="fas fa-chevron-left" 
+                            style={property.index === 0 ? {color: "transparent", cursor: "default"} : {color: "white"}} 
+                            className="far fa-arrow-alt-circle-left" 
                             onClick={  
                                 property.index === 0 ? () => "" : this.prevProperty
                             } 
-                            disabled={property.index === 0}
-                        />
+                            />
                     </div>
                     <div className="content ">
                         <Tabs active={this.state.active} onChange={active => this.setState({active})}>
@@ -104,14 +103,14 @@ class Products extends Component {
                         </Tabs>
                         < Card property={property}/> 
                     </div>               
-                    <div className="btn" style={{color: "white"}}>
+                    <div className="btn" >
                         <i 
-                            className="fas fa-chevron-right" 
+                            className="far fa-arrow-alt-circle-right" 
                             onClick={  
                                 property.index === this.state.properties.length - 1 ? () => "" : this.nextProperty
                             } 
-                            disabled={property.index === this.state.properties.length - 1}
-                        />
+                            style={property.index === this.state.properties.length - 1 ? {color: "transparent", cursor: "default"} : {color: "white"}} 
+                            />
                     </div>
                 </div>
             </div>

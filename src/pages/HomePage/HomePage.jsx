@@ -8,7 +8,7 @@ import "./HomePage.css"
 const HomePage = () => {
     return(
         <div className="home_page">
-            <Hero id="hero" />
+            <Hero />
             <About id="about" />
             <Products id="products"  />
             <footer className="footer element"  >    
@@ -18,15 +18,16 @@ const HomePage = () => {
                     Phone: (323) 609-3796 <br/>
                     Email: sixsweetunder@gmail.com
                 </p>
-                <p className="Copyright" id="contact">
+                <p className="Copyright" >
                     © 2019 Copyright: Six Sweet Under <br/>
-                    Created by- 
+                    Created by  
                     <a 
+                        id="contact"
                         href="https://www.danillovieira.com/"   
                         rel="noopener noreferrer" 
                         target="_blank"
                     >
-                        Danillo Vieira
+                        : Danillo Vieira
                     </a>
                 </p>   
             </footer>

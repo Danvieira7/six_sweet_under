@@ -29,6 +29,9 @@
     height: 100px;
     padding-top: 10px;
 }
+.toolbar_logo img:hover {
+    cursor: pointer;
+}
 
 /* --------LINKS--------- */
 

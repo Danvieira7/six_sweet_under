@@ -27,6 +27,11 @@
 
 .btn{
     width: 10%;
+    color: white;
+}
+
+.btn :hover{
+    cursor: pointer;
 }
 
 .card {

@@ -36,7 +36,7 @@ class App extends Component {
         <Toolbar 
           drawerClickHandler={this.toggleClickHandler}
         />
-        <SideDrawer show={this.state.SideDrawerOpen}/>
+        <SideDrawer show={this.state.SideDrawerOpen} click={this.backdropClickHandler}/>
         {backdrop} 
         <Switch>
           <Route exact path="/" render={(props) => ( 

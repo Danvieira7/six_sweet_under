@@ -28,15 +28,17 @@
     margin: 0.5rem 0;
 }
 
-.side_drawer a {
-    color: black;
+.side_drawer li {
+    color: white;
     text-decoration: none;
+    font-family: 'Ruthie', cursive;
     font-size: 1.2rem;
 }
 
-.side_drawer a:active,
-.side_drawer a:hover{
-    color: goldenrod;   
+.side_drawer li:active,
+.side_drawer li:hover{
+    color: goldenrod;
+    cursor: pointer;   
 }
 
 @media (min-width: 769px) {
