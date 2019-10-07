@@ -11,16 +11,16 @@ const HomePage = () => {
             <Hero id="hero" />
             <About id="about" />
             <Products id="products"  />
-            <footer className="footer element" id="contact" name="contact">    
+            <footer className="footer element"  >    
                 <img src="https://i.imgur.com/jIu9duU.png" alt=""/>
                 <p>
                     Contact Us <br/>
-                    Phone: (000) 000 - 0000 <br/>
+                    Phone: (323) 609-3796 <br/>
                     Email: sixsweetunder@gmail.com
                 </p>
-                <p className="Copyright">
+                <p className="Copyright" id="contact">
                     © 2019 Copyright: Six Sweet Under <br/>
-                    Created by 
+                    Created by- 
                     <a 
                         href="https://www.danillovieira.com/"   
                         rel="noopener noreferrer" 
