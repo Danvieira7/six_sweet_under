@@ -2,17 +2,15 @@ import React from "react";
 import Hero from "../../components/Hero/Hero";
 import Products from "../../components/Products/Products";
 import About from "../../components/About/About";
-import * as Scroll from 'react-scroll';
-import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 import "./HomePage.css"
 
 const HomePage = () => {
     return(
         <div className="home_page">
-            <Hero id="hero" className="element" />
+            <Hero id="hero" />
             <About id="about" />
-            <Products id="products"  className="element" />
+            <Products id="products"  />
             <footer className="footer element" id="contact" name="contact">    
                 <img src="https://i.imgur.com/jIu9duU.png" alt=""/>
                 <p>

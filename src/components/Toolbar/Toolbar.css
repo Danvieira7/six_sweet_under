@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.8);
     height: 100px;
     z-index: 9999;
 }
@@ -45,11 +45,6 @@
     font-size: 30px;
     padding: 0 0.5rem; 
 }
-
-/* .toolbar_nav_items a{
-    color: white;
-    text-decoration: none;
-} */
 
 .toolbar_nav_items li:hover,
 .toolbar_nav_items li:active{

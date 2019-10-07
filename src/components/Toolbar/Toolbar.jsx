@@ -1,8 +1,6 @@
 import React from "react";
-import * as Scroll from 'react-scroll';
-import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
-
 import ToggleButton from "../SideDrawer/ToggleButton";
+import { Link } from 'react-scroll'
 
 import "./Toolbar.css";
 
@@ -11,7 +9,9 @@ const Toolbar = props => (
     <header className="toolbar">
         <nav className="toolbar_navigation">
             <div className="toolbar_toggle_button">
-                <ToggleButton click={props.drawerClickHandler}/>
+                <ToggleButton 
+                    click={props.drawerClickHandler}
+                />
             </div>
             <div className="toolbar_logo"> 
                 <Link 
@@ -32,7 +32,7 @@ const Toolbar = props => (
                     <li>
                         <Link 
                             className="li"
-                            // activeClass="active"
+                            activeClass="active"
                             to="about"
                             spy={ true }
                             smooth={ true }
@@ -42,10 +42,10 @@ const Toolbar = props => (
                             About
                         </Link>
                     </li>
-                    <li>
+                    <li >
                         <Link 
                             className="li"
-                            // activeClass="active"
+                            activeClass="active"
                             to="products"
                             spy={ true }
                             smooth={ true }
@@ -58,7 +58,7 @@ const Toolbar = props => (
                     <li>
                         <Link 
                             className="li"
-                            // activeClass="active"
+                            activeClass="active"
                             to="contact"
                             spy={ true }
                             smooth={ true }

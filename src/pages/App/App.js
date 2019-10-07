@@ -5,7 +5,6 @@ import ImageForm from "../ImagesFormPage/ImagesFormPage"
 import HomePage from "../HomePage/HomePage";
 import Toolbar from "../../components/Toolbar/Toolbar";
 import Backdrop from "../../components/Backdrop/Backdrop";
-
 import './App.css';
 
 class App extends Component {
@@ -34,7 +33,9 @@ class App extends Component {
     
     return(
       <div style={{height:"100%"}}> 
-        <Toolbar drawerClickHandler={this.toggleClickHandler}/>
+        <Toolbar 
+          drawerClickHandler={this.toggleClickHandler}
+        />
         <SideDrawer show={this.state.SideDrawerOpen}/>
         {backdrop} 
         <Switch>
@@ -45,6 +46,7 @@ class App extends Component {
             <ImageForm {...props}/> 
           )}/>
         </Switch>
+
       </div>
     );
   }

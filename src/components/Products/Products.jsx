@@ -81,7 +81,7 @@ class Products extends Component {
     render(){
         const { property } = this.state;
         return(
-            <div className="products">
+            <div className="products" id="products">
                 <h1 className="products-title">Products</h1>
                 <div className="product-wrapper ">
                     <div className="btn">
