@@ -18,7 +18,7 @@ const Pricing = () => {
                     Vegan: $25 -
                     Gluten Free: $25 -
                     Custom Inscription: $5 -
-                    Fresh Florals: Market Price -
+                    Fresh Florals: Market Price 
                 </p>
                 <h1 className="h">Cupcake Pricing</h1>
                 <p>
