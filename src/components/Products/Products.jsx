@@ -98,7 +98,7 @@ class Products extends Component {
                 <div className="product-wrapper ">
                     <div className="btn">
                         <i 
-                            style={property.index === 0 ? {color: "transparent", cursor: "default"} : {color: "white"}} 
+                            style={property.index === 0 || this.state.showComp ? {color: "transparent", cursor: "default"} : {color: "white"}} 
                             className="far fa-arrow-alt-circle-left" 
                             onClick={  
                                 property.index === 0 ? () => "" : this.prevProperty
