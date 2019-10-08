@@ -49,7 +49,7 @@ const Toolbar = props => (
                             to="products"
                             spy={ true }
                             smooth={ true }
-                            offset={-90}
+                            offset={-50}
                             duration={500}
                         >
                             Products

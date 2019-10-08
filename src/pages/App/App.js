@@ -5,6 +5,7 @@ import ImageForm from "../ImagesFormPage/ImagesFormPage"
 import HomePage from "../HomePage/HomePage";
 import Toolbar from "../../components/Toolbar/Toolbar";
 import Backdrop from "../../components/Backdrop/Backdrop";
+
 import './App.css';
 
 class App extends Component {
@@ -46,7 +47,6 @@ class App extends Component {
             <ImageForm {...props}/> 
           )}/>
         </Switch>
-
       </div>
     );
   }

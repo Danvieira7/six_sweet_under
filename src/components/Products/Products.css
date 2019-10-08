@@ -17,9 +17,7 @@
     justify-content: center;
 }
 
-.products-title{
-    font-size: 7vw;
-}
+.products-title{ font-size: 7vw; }
 
 .content {
     width: 80%;
@@ -28,11 +26,13 @@
 
 .btn{
     width: 10%;
-    font-size: 20px;
+    font-size: 30px;
     color: white;
 }
 
-.btn :hover{
-    cursor: pointer;
+.btn :hover{ cursor: pointer; }
+
+@media screen and (max-width: 900px) {
+    .btn{ font-size: 4vw; }
 }
 

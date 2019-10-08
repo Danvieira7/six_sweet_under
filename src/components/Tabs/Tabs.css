@@ -12,7 +12,12 @@
   font-size: 20px;
 }
 
-.Tabs__Tab:hover, .Tabs__Tab--active {
-  background:white;
+.Tabs__Tab:hover {
+  background:goldenrod;
+  color: black;
+}
+
+.Tabs__Tab--active {
+  background-color: white;
   color: black;
 }

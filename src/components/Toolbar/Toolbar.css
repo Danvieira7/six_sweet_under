@@ -5,7 +5,6 @@
     left: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-    height: 100px;
     z-index: 9999;
 }
 
@@ -16,22 +15,18 @@
     padding: 0 1rem;
 }
 
-.spacer{
-    flex: 1;
-}
+.spacer{ flex: 1; }
 
 /* ---------LOGO---------- */
-.toolbar_logo {
-    margin-left: 1rem;
-}
+
+.toolbar_logo { margin-left: 1rem; }
 
 .toolbar_logo img {
-    height: 100px;
+    height: 70px;
     padding-top: 10px;
 }
-.toolbar_logo img:hover {
-    cursor: pointer;
-}
+
+.toolbar_logo img:hover { cursor: pointer; }
 
 /* --------LINKS--------- */
 
@@ -82,17 +77,10 @@
 /* ------RESPOSINVENESS------ */
 
 @media (max-width: 768px){
-    .toolbar_nav_items{
-        display: none
-    }
+    .toolbar_nav_items{ display: none }
 }
 
 @media (min-width: 769px) {
-    .toolbar_toggle_button {
-        display: none;
-    }
-
-    .toolbar_logo {
-        margin-left: 0;
-    }
+    .toolbar_toggle_button { display: none; }
+    .toolbar_logo { margin-left: 0; }
 }

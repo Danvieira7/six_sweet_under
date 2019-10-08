@@ -14,13 +14,18 @@ const HomePage = () => {
             <footer className="footer element"  >    
                 <img src="https://i.imgur.com/jIu9duU.png" alt=""/>
                 <p>
-                    Contact Us <br/>
-                    Phone: (323) 609-3796 <br/>
-                    Email: sixsweetunder@gmail.com
+                    Contact Us 
+                    <br/>
+                    <a href="tel:3236093796">
+                        <i className="fas fa-phone-square"/> (323) 609-3796
+                    </a>
+                    <br/>
+                    <a href="meilto:sixsweetunder@gmail.com"> 
+                        <i className="fas fa-envelope"/> sixsweetunder@gmail.com 
+                    </a>
                 </p>
                 <p className="Copyright" >
-                    © 2019 Copyright: Six Sweet Under <br/>
-                    Created by  
+                    Created by
                     <a 
                         id="contact"
                         href="https://www.danillovieira.com/"   
@@ -29,6 +34,8 @@ const HomePage = () => {
                     >
                         : Danillo Vieira
                     </a>
+                    <br/>
+                    © 2019 Copyright: Six Sweet Under 
                 </p>   
             </footer>
         </div>

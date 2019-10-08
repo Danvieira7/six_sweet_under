@@ -10,23 +10,24 @@
 }
 
 .details-wrapper {
-    color: white;
-    width: 50%;
-    height: 55%x;
-    background-color: transparent;
-    text-align: justify;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: justify;
+    width: 50%;
     margin: 20px;
+    color: white;
+    background-color: transparent;
 }
 
 .description{
     font-family: 'Cinzel', serif;
     font-size: 15px;
+    padding: 10px;
 }
 .name{
     font-size: 35px;
+    padding: 10px;
 }
 
 .card {
@@ -48,6 +49,9 @@
 }
 
 @media screen and (max-width: 900px) {
+    
+    .details-wrapper { width: 90%; }
+
     .card {
         display: flex;
         flex-direction: column;
@@ -63,17 +67,11 @@
     .description{
         text-align: center;
         font-size: 17px;  
-        padding-bottom: 0; 
     }
     
-    .name{
-        text-align: center;  
-    }
+    .name{ text-align: center; }
 }
 
 @media screen and (max-width: 500px) {
-    
-    .description{
-        font-size: 12px;   
-    }
+    .description{ font-size: 12px; }
 }
