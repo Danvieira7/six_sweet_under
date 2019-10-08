@@ -65,8 +65,15 @@
         font-size: 17px;  
         padding-bottom: 0; 
     }
-
+    
     .name{
         text-align: center;  
+    }
+}
+
+@media screen and (max-width: 500px) {
+    
+    .description{
+        font-size: 12px;   
     }
 }
