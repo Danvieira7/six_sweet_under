@@ -7,10 +7,21 @@
 }
 
 h1 {
-    font-size: 3vw;
+    font-size: 40px;
 }
 
 p {
     font-family: 'Cinzel', serif;
-    font-size: 1vw;
+    font-size:20px;
+
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+       font-size: 27px;
+    }
+    p {
+       font-size: 13px;
+    }
+
 }
