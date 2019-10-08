@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000/api/images/";
+const BASE_URL = "/api/images/";
 
 function getImages() {
   return fetch( BASE_URL + "getAllImages", {
