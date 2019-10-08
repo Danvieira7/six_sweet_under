@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Card from "../Card/Card";
+import Pricing from "../Pricing/Pricing";
 import Tabs from "../Tabs/Tabs";
 import imageService from "../../utils/imageService";
 
@@ -51,9 +52,11 @@ class Products extends Component {
     }
     
     cakeChange = () => {
+        
         this.setState({
             properties: this.state.bolo,
             property: this.state.bolo[0],
+            showComp: false
         })    
     }
 
@@ -61,6 +64,7 @@ class Products extends Component {
         this.setState({
             properties: this.state.cupcake,
             property: this.state.cupcake[0],
+            showComp: false
         })    
     }
 
@@ -68,6 +72,7 @@ class Products extends Component {
         this.setState({
             properties: this.state.bars,
             property: this.state.bars[0],
+            showComp: false
         })    
     }
 
@@ -75,7 +80,14 @@ class Products extends Component {
         this.setState({
             properties: this.state.flavors,
             property: this.state.flavors[0],
+            showComp: false
         })    
+    }
+    
+    priceChange = () => {
+        this.setState({
+            showComp: true
+        })
     }
     
     render(){
@@ -99,9 +111,11 @@ class Products extends Component {
                             <div key="graveyards" onClick={this.cupcakeChange}>Graveyards</div>
                             <div key="bars" onClick={this.barsChange}>Bars</div>
                             <div key="flavors" onClick={this.flavorsChange}>Flavors</div>
-                            <div key="pricing" onClick={this.cupcakeChange}>Pricing</div>
+                            <div key="pricing" onClick={this.priceChange}>Pricing</div>
                         </Tabs>
-                        < Card property={property}/> 
+                        {this.state.showComp === true ? 
+                        <Pricing /> : 
+                        < Card property={property}/> }
                     </div>               
                     <div className="btn" >
                         <i 
@@ -109,7 +123,9 @@ class Products extends Component {
                             onClick={  
                                 property.index === this.state.properties.length - 1 ? () => "" : this.nextProperty
                             } 
-                            style={property.index === this.state.properties.length - 1 ? {color: "transparent", cursor: "default"} : {color: "white"}} 
+                            style={property.index === this.state.properties.length  - 1 || this.state.showComp ? 
+                                {color: "transparent", cursor: "default"} : 
+                                {color: "white"}} 
                             />
                     </div>
                 </div>

@@ -6,6 +6,7 @@
     justify-content: center;
     color: white;
     font-family: 'Amatic SC', cursive;
+    width: 90%;
 }
 
 .products {
@@ -27,6 +28,7 @@
 
 .btn{
     width: 10%;
+    font-size: 20px;
     color: white;
 }
 
@@ -45,6 +47,8 @@
     width: 100%;
     background-color: transparent;
 }
+
+
 
 .card img {
     max-width: 50%;
