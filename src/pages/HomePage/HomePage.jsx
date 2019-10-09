@@ -20,7 +20,7 @@ const HomePage = () => {
                         <i className="fas fa-phone-square"/> (323) 609-3796
                     </a>
                     <br/>
-                    <a href="meilto:sixsweetunder@gmail.com"> 
+                    <a href="mailto:sixsweetunder@gmail.com"> 
                         <i className="fas fa-envelope"/> sixsweetunder@gmail.com 
                     </a>
                 </p>
