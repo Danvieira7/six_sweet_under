@@ -12,7 +12,7 @@ const About = () => {
                 Six Sweet Under is an online boutique bakery based in Los Angeles, CA.<br/> 
                 Started by Pastry Chef and food media host, Callista Mei, she wanted to bring 
                 something different to the sweeter side of life. 
-                Her personal style of goth and glam emulates <br/>
+                Her personal style of goth and glam emulates
                 through her creations and is a breath of dark air in a pastel city.
                 <br/>
                 <br/>

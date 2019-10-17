@@ -25,7 +25,7 @@ const HomePage = () => {
                     </a>
                 </p>
                 <p className="Copyright" >
-                    Created by
+                    Website created by
                     <a 
                         id="contact"
                         href="https://www.danillovieira.com/"   
