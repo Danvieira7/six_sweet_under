@@ -20,9 +20,5 @@
 }
 
 @media screen and (max-width: 500px) {
-    .about-body {
-        font-size: 18px;
-    }
-    
-
+    .about-body { font-size: 18px; }
 }

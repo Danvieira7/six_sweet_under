@@ -19,19 +19,16 @@ const Pricing = () => {
                     Custom Inscription: $5 <br/>
                     Fresh Florals: Market Price 
                 </p>
-
                 <h1 className="h">Graveyards</h1>
                 <p>
                     $48 per dozen (6oz each)<br/>
                     1 dozen minimum to order and 1 flavor per dozen.
                 </p>
-
                 <h1 className="h">Bars</h1>
                 <p>
                     $70 per tray (24 pieces)<br/>
                     1 tray minimum to order and 1 flavor per tray.
-                </p>
-                
+                </p>                
                 <h1 className="h">Cupcakes</h1>
                 <p>
                     Minis $24 per dozen (2 dozen minimum to order)<br/>

@@ -23,7 +23,7 @@ class Products extends Component {
         const data = await imageService.getImages()
         const bolo = data.filter( b => b.category === "bolo");
         const bars = data.filter( b => b.category === "bars");
-        const flavors = data.filter( b => b.category === "flavors");
+        const flavors = data.filter( f => f.category === "flavors");
         const cupcake = data.filter( c => c.category === "cupcake");
         this.setState({
             properties: bolo,
@@ -52,7 +52,6 @@ class Products extends Component {
     }
     
     cakeChange = () => {
-        
         this.setState({
             properties: this.state.bolo,
             property: this.state.bolo[0],
@@ -90,43 +89,41 @@ class Products extends Component {
         })
     }
     
-    render(){
+    render() {
         const { property } = this.state;
         return(
             <div className="products" >
-                <h1 className="products-title">Products</h1>
+                <h1 className="products-title"> Products </h1>
                 <div className="product-wrapper ">
                     <div className="btn">
                         <i 
-                            style={property.index === 0 || this.state.showComp ? {color: "transparent", cursor: "default"} : {color: "white"}} 
+                            style={ property.index === 0 || this.state.showComp ? { color: "transparent", cursor: "default" } : { color: "white" }} 
                             className="far fa-arrow-alt-circle-left" 
                             onClick={  
                                 property.index === 0 ? () => "" : this.prevProperty
                             } 
-                            />
+                        />
                     </div>
-                    <div className="content ">
-                        <Tabs active={this.state.active} onChange={active => this.setState({active})}>
-                            <div key="cake" onClick={this.cakeChange}>Cakes</div>
-                            <div key="graveyards" onClick={this.cupcakeChange}>Graveyards</div>
-                            <div key="bars" onClick={this.barsChange}>Bars</div>
-                            <div key="flavors" onClick={this.flavorsChange}>Flavors</div>
-                            <div key="pricing" onClick={this.priceChange}>Pricing</div>
+                    <div className="content">
+                        <Tabs active={ this.state.active } onChange={ active => this.setState({active}) }>
+                            <div key="cake" onClick={ this.cakeChange }>Cakes</div>
+                            <div key="graveyards" onClick={ this.cupcakeChange }>Graveyards</div>
+                            <div key="bars" onClick={ this.barsChange }>Bars</div>
+                            <div key="flavors" onClick={ this.flavorsChange }>Flavors</div>
+                            <div key="pricing" onClick={ this.priceChange }>Pricing</div>
                         </Tabs>
-                        {this.state.showComp === true ? 
-                        <Pricing /> : 
-                        < Card property={property}/> }
+                        { this.state.showComp === true ? <Pricing /> : < Card property={ property }/> }
                     </div>               
-                    <div className="btn" >
+                    <div className="btn">
                         <i 
                             className="far fa-arrow-alt-circle-right" 
                             onClick={  
                                 property.index === this.state.properties.length - 1 ? () => "" : this.nextProperty
                             } 
-                            style={property.index === this.state.properties.length  - 1 || this.state.showComp ? 
-                                {color: "transparent", cursor: "default"} : 
-                                {color: "white"}} 
-                            />
+                            style={ property.index === this.state.properties.length  - 1 || this.state.showComp ? 
+                                { color: "transparent", cursor: "default" } : { color: "white" }
+                            } 
+                        />
                     </div>
                 </div>
             </div>

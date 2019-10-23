@@ -5,9 +5,8 @@ import "./About.css";
 const About = () => {
     return(
         <div className="about"> 
-            <h1 className="about_title">Desserts To Die For</h1>
-            <br/>
-            
+            <h1 className="about_title"> Desserts To Die For </h1>
+            <br/> 
             <p className="about-body">
                 Six Sweet Under is an online boutique bakery based in Los Angeles, CA.<br/> 
                 Started by Pastry Chef and food media host, Callista Mei, she wanted to bring 

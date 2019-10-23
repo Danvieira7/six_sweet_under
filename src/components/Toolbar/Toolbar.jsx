@@ -4,14 +4,11 @@ import { Link } from 'react-scroll'
 
 import "./Toolbar.css";
 
-
 const Toolbar = props => (
     <header className="toolbar">
         <nav className="toolbar_navigation">
             <div className="toolbar_toggle_button">
-                <ToggleButton 
-                    click={props.drawerClickHandler}
-                />
+                <ToggleButton click={ props.drawerClickHandler } />
             </div>
             <div className="toolbar_logo"> 
                 <Link 
@@ -49,8 +46,8 @@ const Toolbar = props => (
                             to="products"
                             spy={ true }
                             smooth={ true }
-                            offset={-50}
-                            duration={500}
+                            offset={ -50 }
+                            duration={ 500 }
                         >
                             Products
                         </Link>
@@ -62,8 +59,8 @@ const Toolbar = props => (
                             to="contact"
                             spy={ true }
                             smooth={ true }
-                            offset={0}
-                            duration={500}
+                            offset={ 0 }
+                            duration={ 500 }
                         >
                             Contact
                         </Link>
@@ -73,8 +70,16 @@ const Toolbar = props => (
             <div className="spacer"/>
             <div className="toolbar_nav_icons">  
                 <ul>
-                    <li><a href="https://instagram.com/sixsweet_under?igshid=hb7jn3utvma" rel="noopener noreferrer" target="_blank"><i className="fab fa-instagram"></i></a></li>
-                    <li><a href="https://www.facebook.com/sixsweetunder/" rel="noopener noreferrer" target="_blank" ><i className="fab fa-facebook-square"></i></a></li>
+                    <li>
+                        <a href="https://instagram.com/sixsweet_under?igshid=hb7jn3utvma" rel="noopener noreferrer" target="_blank">
+                            <i className="fab fa-instagram"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/sixsweetunder/" rel="noopener noreferrer" target="_blank" >
+                            <i className="fab fa-facebook-square"/>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>

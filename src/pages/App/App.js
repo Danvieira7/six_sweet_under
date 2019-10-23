@@ -9,15 +9,15 @@ import Backdrop from "../../components/Backdrop/Backdrop";
 import './App.css';
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super();
-    this.state ={
+    this.state = {
       SideDrawerOpen: false
     }
   }
   
   toggleClickHandler = () => {
-      this.setState((prevState) => {
+    this.setState((prevState) => {
       return{SideDrawerOpen: !prevState.SideDrawerOpen}
     });
   };
@@ -26,25 +26,25 @@ class App extends Component {
     this.setState({SideDrawerOpen: false});
   };
 
-  render(){
+  render() {
     let backdrop;
     if(this.state.SideDrawerOpen) {
-      backdrop = <Backdrop click={this.backdropClickHandler}/>
+      backdrop = <Backdrop click={ this.backdropClickHandler }/>
     }
     
     return(
-      <div style={{height:"100%"}}> 
+      <div> 
         <Toolbar 
-          drawerClickHandler={this.toggleClickHandler}
+          drawerClickHandler={ this.toggleClickHandler }
         />
-        <SideDrawer show={this.state.SideDrawerOpen} click={this.backdropClickHandler}/>
-        {backdrop} 
+        <SideDrawer show={ this.state.SideDrawerOpen } click={ this.backdropClickHandler }/>
+        { backdrop } 
         <Switch>
-          <Route exact path="/" render={(props) => ( 
-            <HomePage {...props}/> 
-          )}/>
-          <Route exact path="/upload" render={(props) => (
-            <ImageForm {...props}/> 
+          <Route exact path="/" render={ (props) => ( 
+            <HomePage { ...props }/> 
+          ) }/>
+          <Route exact path="/upload" render={ (props) => (
+            <ImageForm { ...props }/> 
           )}/>
         </Switch>
       </div>

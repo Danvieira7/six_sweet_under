@@ -11,7 +11,7 @@ const HomePage = () => {
             <Hero />
             <About id="about" />
             <Products id="products"  />
-            <footer className="footer element"  >    
+            <footer className="footer element">    
                 <img src="https://i.imgur.com/jIu9duU.png" alt=""/>
                 <p>
                     Contact Us 

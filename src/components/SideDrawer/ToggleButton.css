@@ -11,9 +11,8 @@
     box-sizing: border-box;
 }
 
-.toggle_button :focus{
-    outline: none;
-}
+.toggle_button :focus{ outline: none; }
+
 .toggle_button_line {
     width: 23px;
     height: 2.5px;

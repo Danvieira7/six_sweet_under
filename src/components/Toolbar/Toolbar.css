@@ -1,4 +1,4 @@
-.toolbar{
+.toolbar {
     position: fixed;
     display: block;
     top: 0;
@@ -8,7 +8,7 @@
     z-index: 9999;
 }
 
-.toolbar_navigation{
+.toolbar_navigation {
     display: flex;
     height: 100%;
     align-items: center;
@@ -30,7 +30,7 @@
 
 /* --------LINKS--------- */
 
-.toolbar_nav_items ul{
+.toolbar_nav_items ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -45,38 +45,38 @@
 }
 
 .toolbar_nav_items li:hover,
-.toolbar_nav_items li:active{
+.toolbar_nav_items li:active {
     cursor: pointer;
     color: goldenrod;
 }
 
 /* ------ICONS------- */
 
-.toolbar_nav_icons ul{
+.toolbar_nav_icons ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-.toolbar_nav_icons li{
+.toolbar_nav_icons li {
     padding: 0 0.5rem;
     font-size: 30px; 
 }
 
-.toolbar_nav_icons a{
+.toolbar_nav_icons a {
     color: white;
     text-decoration: none;
 }
 
 .toolbar_nav_icons a:hover,
-.toolbar_nav_icons a:active{
+.toolbar_nav_icons a:active {
     color: goldenrod;
 }
 
 /* ------RESPOSINVENESS------ */
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .toolbar_nav_items{ display: none }
 }
 

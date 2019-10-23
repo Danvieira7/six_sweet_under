@@ -19,4 +19,3 @@ router.get("/getAllImages", imageCtrl.getAllImages);
 router.post("/createImage", parser.single('image'), imageCtrl.createImage);
 
 module.exports = router;
-

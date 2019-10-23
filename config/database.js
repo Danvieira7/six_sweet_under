@@ -1,7 +1,5 @@
 var mongoose = require('mongoose');
 
-// mongoose.connect(process.env.DATABASE_URL);
-
 mongoose.connect(process.env.DATABASE_URL, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
@@ -11,7 +9,7 @@ mongoose.connect(process.env.DATABASE_URL, {
     console.log(`DB Connection Error: ${err.message}`);
 });
 
-mongoose.connection.on('conected', function(){
+mongoose.connection.on('conected', function() {
     console.log(`mongose conected to: ${process.env.DATABASE_URL}`);
 });
 

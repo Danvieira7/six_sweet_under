@@ -20,12 +20,12 @@
     background-color: transparent;
 }
 
-.description{
+.description {
     font-family: 'Cinzel', serif;
     font-size: 15px;
     padding: 10px;
 }
-.name{
+.name {
     font-size: 35px;
     padding: 10px;
 }
@@ -48,8 +48,7 @@
     width: 100%;
 }
 
-@media screen and (max-width: 900px) {
-    
+@media screen and (max-width: 900px) {  
     .details-wrapper { width: 90%; }
 
     .card {
@@ -64,14 +63,14 @@
         width: 100%;
     }
     
-    .description{
+    .description {
         text-align: center;
         font-size: 17px;  
     }
     
-    .name{ text-align: center; }
+    .name { text-align: center; }
 }
 
 @media screen and (max-width: 500px) {
-    .description{ font-size: 12px; }
+    .description { font-size: 12px; }
 }
