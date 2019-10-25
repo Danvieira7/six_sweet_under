@@ -17,6 +17,7 @@ const Pricing = () => {
                     Vegan: $15 <br/>
                     Gluten Free: $15 <br/>
                     Custom Inscription: $5 <br/>
+                    Delivery Fee: $15 <br/>
                     Fresh Florals: Market Price 
                 </p>
                 <h1 className="h">Graveyards</h1>
