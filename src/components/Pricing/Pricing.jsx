@@ -34,6 +34,8 @@ const Pricing = () => {
                 <p>
                     Minis $24 per dozen (2 dozen minimum to order)<br/>
                     Standard: $30 per dozen (1 dozen minimum to order)<br/>
+                </p>
+                <p style={{color: "goldenrod"}}>
                     All orders must be placed a minimum of 72 hour in advance
                 </p>
             </div>
