@@ -33,7 +33,8 @@ const Pricing = () => {
                 <h1 className="h">Cupcakes</h1>
                 <p>
                     Minis $24 per dozen (2 dozen minimum to order)<br/>
-                    Standard: $30 per dozen (1 dozen minimum to order)
+                    Standard: $30 per dozen (1 dozen minimum to order)<br/>
+                    All orders must be placed a minimum of 72 hour in advance
                 </p>
             </div>
         </div>
