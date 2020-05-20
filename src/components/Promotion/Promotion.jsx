@@ -14,7 +14,7 @@ const Promotion = props => {
                 <img className="modal-logo" src="https://i.imgur.com/jIu9duU.png" alt=""/>
                 <h1 className="promo-h">Trick Or Treat Box</h1>
                 <p>
-                    You can get a taste of Cheff Callista Mei’s own deadly delicious desserts <br />
+                    You can get a taste of Chef Callista Mei’s own deadly delicious desserts <br />
                     delivered to your door!<br /> 
                     Sold out last round so get your orders in by the 20th!<br />
                     More Info on the Trick Or Treat Tab Under Products.
