@@ -10,29 +10,20 @@ class Products extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            data: [],
             properties: [],
-            property: "",
-            bolo: [],
-            bars: [],
-            flavors: [],
-            cupcake: []
+            property: ""
         }
     }
-
+    
     async componentDidMount() {
-        const data = await imageService.getImages()
-        const bolo = data.filter( b => b.category === "bolo");
-        const bars = data.filter( b => b.category === "bars");
-        const flavors = data.filter( f => f.category === "flavors");
-        const cupcake = data.filter( c => c.category === "cupcake");
+        const data = await imageService.getImages();
+        const bolo = await data.filter( b => b.category === "box");
         this.setState({
+            data: data,
             properties: bolo,
             property: bolo[0],  
-            bolo: bolo,
-            cupcake: cupcake,
-            bars: bars,
-            flavors: flavors,
-            active: "cake",
+            active: "box",
             showComp: false
         })
     }
@@ -41,85 +32,55 @@ class Products extends Component {
         const newIndex = this.state.property.index +1;
         this.setState({
             property: this.state.properties[newIndex]
-        })
+        });
     }
         
     prevProperty = () => {
         const newIndex = this.state.property.index - 1;
         this.setState({
           property: this.state.properties[newIndex]
-        })
+        });
     }
     
-    cakeChange = () => {
+    handleChange = e => {
+        const properties = this.state.data.filter( item => item.category === e.currentTarget.id);
         this.setState({
-            properties: this.state.bolo,
-            property: this.state.bolo[0],
+            properties: properties,
+            property: properties[0],
             showComp: false
-        })    
-    }
-
-    cupcakeChange = () => {
-        this.setState({
-            properties: this.state.cupcake,
-            property: this.state.cupcake[0],
-            showComp: false
-        })    
-    }
-
-    barsChange = () => {
-        this.setState({
-            properties: this.state.bars,
-            property: this.state.bars[0],
-            showComp: false
-        })    
-    }
-
-    flavorsChange = () => {
-        this.setState({
-            properties: this.state.flavors,
-            property: this.state.flavors[0],
-            showComp: false
-        })    
+        });
     }
     
-    priceChange = () => {
-        this.setState({
-            showComp: true
-        })
-    }
+    priceChange = () =>  this.setState({ showComp: true });
     
     render() {
         const { property } = this.state;
         return(
-            <div className="products" >
+            <div className="products">
                 <h1 className="products-title"> Products </h1>
                 <div className="product-wrapper ">
                     <div className="btn">
                         <i 
                             style={ property.index === 0 || this.state.showComp ? { color: "transparent", cursor: "default" } : { color: "white" }} 
                             className="far fa-arrow-alt-circle-left" 
-                            onClick={  
-                                property.index === 0 ? () => "" : this.prevProperty
-                            } 
+                            onClick={ property.index === 0 ? () => "" : this.prevProperty } 
                         />
                     </div>
                     <div className="content">
                         <Tabs active={ this.state.active } onChange={ active => this.setState({active}) }>
-                            <div key="cake" onClick={ this.cakeChange }>Cakes</div>
-                            <div key="graveyards" onClick={ this.cupcakeChange }>Graveyards</div>
-                            <div key="bars" onClick={ this.barsChange }>Bars</div>
-                            <div key="flavors" onClick={ this.flavorsChange }>Flavors</div>
-                            <div key="pricing" onClick={ this.priceChange }>Pricing</div>
+                            <div id="box" onClick={ this.handleChange }>Trick Or Treat</div>
+                            <div id="bolo" onClick={ this.handleChange }>Cakes</div>
+                            <div id="cupcake" onClick={ this.handleChange }>Graveyards</div>
+                            <div id="bars" onClick={ this.handleChange }>Bars</div>
+                            <div id="flavors" onClick={ this.handleChange }>Flavors</div>
+                            <div id="pricing" onClick={ this.priceChange }>Pricing</div>
                         </Tabs>
-                        { this.state.showComp === true ? <Pricing /> : < Card property={ property }/> }
+                        { this.state.showComp === true ? <Pricing /> : < Card property={ property } /> }
                     </div>               
                     <div className="btn">
                         <i 
                             className="far fa-arrow-alt-circle-right" 
-                            onClick={  
-                                property.index === this.state.properties.length - 1 ? () => "" : this.nextProperty
-                            } 
+                            onClick={ property.index === this.state.properties.length - 1 ? () => "" : this.nextProperty } 
                             style={ property.index === this.state.properties.length  - 1 || this.state.showComp ? 
                                 { color: "transparent", cursor: "default" } : { color: "white" }
                             } 

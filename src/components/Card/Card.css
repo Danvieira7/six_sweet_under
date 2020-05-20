@@ -30,7 +30,7 @@
     padding: 10px;
 }
 
-.card {
+.card- {
     border-top: 1px solid white;
     border-bottom: 1px solid white;
     display: flex;
@@ -43,7 +43,7 @@
     padding: 20px;
 }
 
-.card img {
+.card- img {
     max-width: 50%;
     width: 100%;
 }
@@ -51,14 +51,14 @@
 @media screen and (max-width: 900px) {  
     .details-wrapper { width: 90%; }
 
-    .card {
+    .card- {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
     }
     
-    .card img {
+    .card- img {
         max-width: 80%;
         width: 100%;
     }
