@@ -17,8 +17,9 @@ class App extends Component {
       modalShow: false
     }
   }
+
   componentDidMount() {
-    setTimeout(() => { this.setState({ modalShow: true })}, 2000);
+    setTimeout(() => { this.setState({ modalShow: true })}, 2500);
     document.body.style.overflowY = "hidden"
   }
   
