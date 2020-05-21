@@ -6,8 +6,9 @@ module.exports = {
 }
 
 async function getAllImages(req, res) {
-    await Image.find({}).then( data => {
-        res.status(200).json(data);
+    await Image.find({}, (err, data) => {
+        if(err) console.log(err);
+        res.status(200).json(data)
     })
 }
 
