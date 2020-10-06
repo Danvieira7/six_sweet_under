@@ -26,7 +26,6 @@ class Products extends Component {
             active: "box",
             showComp: false
         })
-        console.log(data)
     }
 
     nextProperty = () => {
