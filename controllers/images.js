@@ -13,7 +13,7 @@ async function getAllImages(req, res) {
 }
 
 function createImage(req, res) {
-    var data = new Image(req.body);
+    const data = new Image(req.body);
     data.save(() => {
         res.status(201).json(data)
     });

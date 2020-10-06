@@ -5,7 +5,7 @@ import { Link } from 'react-scroll'
 import "./Toolbar.css";
 
 const Toolbar = props => (
-    <header className="toolbar">
+    <div className="toolbar">
         <nav className="toolbar_navigation">
             <div className="toolbar_toggle_button">
                 <ToggleButton click={ props.drawerClickHandler } />
@@ -83,7 +83,7 @@ const Toolbar = props => (
                 </ul>
             </div>
         </nav>
-    </header>
+    </div>
 );
 
 export default Toolbar;

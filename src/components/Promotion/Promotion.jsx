@@ -4,22 +4,21 @@ import "./Promotion.css"
 
 const Promotion = props => {
     let modalClasses = "bg-modal";
-    if(props.show) {
-        modalClasses = "bg-modal-open";
-    }
+    if(props.show) modalClasses = "bg-modal-open";
+
     return (       
-       <div className={ modalClasses }>
-            <div className="modal-content">
-                <button className="close-x" onClick={props.hide}>+</button>
+       <div className={ modalClasses } onClick={ props.hide }>
+            <div className="modal-content" >
+                <button className="close-x" onClick={ props.hide }>+</button>
                 <img className="modal-logo" src="https://i.imgur.com/jIu9duU.png" alt=""/>
-                <h1 className="promo-h">Trick Or Treat Box</h1>
+                <h1 className="promo-h">October Specials</h1>
                 <p>
-                    You can get a taste of Chef Callista Mei’s own deadly delicious desserts <br />
-                    delivered to your door!<br /> 
-                    Sold out last round so get your orders in by the 20th!<br />
-                    More Info on the Trick Or Treat Tab Under Products.
+                    Baker's choice of mixed treats for a sweet or scary surprise.<br/>
+                    More info on the October Specials tab under Products.<br/>
+                    <br/>
+                    Take a bite if you dare!
                 </p>
-                <button className="close-btn" onClick={props.hide}>click here to close</button>
+                <button className="close-btn" onClick={ props.hide }>Close</button>
             </div>
        </div>
     )

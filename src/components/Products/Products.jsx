@@ -26,6 +26,7 @@ class Products extends Component {
             active: "box",
             showComp: false
         })
+        console.log(data)
     }
 
     nextProperty = () => {
@@ -68,7 +69,7 @@ class Products extends Component {
                     </div>
                     <div className="content">
                         <Tabs active={ this.state.active } onChange={ active => this.setState({active}) }>
-                            <div id="box" onClick={ this.handleChange }>Trick Or Treat</div>
+                            <div id="box" onClick={ this.handleChange }>October Specials</div>
                             <div id="bolo" onClick={ this.handleChange }>Cakes</div>
                             <div id="cupcake" onClick={ this.handleChange }>Graveyards</div>
                             <div id="bars" onClick={ this.handleChange }>Bars</div>

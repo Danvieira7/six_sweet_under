@@ -50,7 +50,7 @@ class App extends Component {
           <Route exact path="/" render={ props => ( 
             <HomePage { ...props }/> 
           ) }/>
-          <Route exact path="/upload" render={ (props) => ( 
+          <Route exact path="/upload" render={ props => ( 
             <ImageForm { ...props }/> 
           )}/>
         </Switch>
@@ -59,4 +59,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App; 
