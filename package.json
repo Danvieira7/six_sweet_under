@@ -52,7 +52,7 @@
     ]
   },
   "devDependencies": {
-    "cypress": "^4.6.0",
+    "cypress": "^4.12.1",
     "node-sass": "^4.14.1"
   },
   "proxy": "http://localhost:5000"
